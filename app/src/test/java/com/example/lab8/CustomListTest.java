@@ -68,7 +68,7 @@ public class CustomListTest {
         City city = new City("Charlottetown", "Prince Edward Island");
         list.add(city);
 
-        assertEquals(list.getCities().size(), Optional.ofNullable(list.countCities()));
+        assertEquals(list.getCities().size(), (list.countCities()));
 
     }
 
