@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class CustomListTest {
 
@@ -57,4 +58,21 @@ public class CustomListTest {
             list.deleteCity(city);
         });
     }
+
+
+
+    @Test
+    void testCountCities() {
+        list = MockCityList();
+
+        City city = new City("Charlottetown", "Prince Edward Island");
+        list.add(city);
+
+        assertEquals(list.getCities().size(), Optional.ofNullable(list.countCities()));
+
+    }
+
+
+
+
 }
